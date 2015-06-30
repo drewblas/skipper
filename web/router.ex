@@ -15,6 +15,12 @@ defmodule Skipper.Router do
   scope "/", Skipper do
     pipe_through :browser # Use the default browser stack
 
+    get "register_form", AuthController, :register_form
+    post "register", AuthController, :register
+    get "login_form", AuthController, :login_form
+    post "login", AuthController, :login
+    get "sign_out", AuthController, :sign_out
+
     get "/", PageController, :index
   end
 
