@@ -126,7 +126,7 @@ defmodule Skipper.AuthActions do
     {:error, message}
   end
 
-  defp generate_random_key
+  defp generate_random_key do
     Comeonin.Pbkdf2.hashpwsalt "1"
   end
 
